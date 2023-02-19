@@ -1,5 +1,5 @@
 // Components Import
-import CategoriesDirectory from '../../categories-directory/CategoriesDirectory';
+import CategoriesDirectory from '../../components/categories-directory/CategoriesDirectory';
 import { Outlet } from 'react-router-dom';
 
 const Home = () => {
