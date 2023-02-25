@@ -1,4 +1,4 @@
-import './category.styles.scss';
+import { CategoryContainer, CategoryTitle } from './category.styles';
 
 import { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -17,15 +17,15 @@ const Category = () => {
 
     return (
         <>
-            <h2 className='category-title'>{category.toUpperCase()}</h2>
-            <div className='category-container'>
+            <CategoryTitle>{category.toUpperCase()}</CategoryTitle>
+            <CategoryContainer>
                 {/* USE THIS SAFE GUARD TO ENSURE THAT ASYNC DATA THAT IS FETCHED IS NOT ATTEMPTED TO BE RENDERED*/}
                 { products &&
                     products.map(product =>
                         <ProductCard key={product.id} product={product}/>
                     )
                 }
-            </div>
+            </CategoryContainer>
         </>
     )
 }
